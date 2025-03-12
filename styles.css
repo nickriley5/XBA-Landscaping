@@ -1,0 +1,548 @@
+/* Fullscreen Intro */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #EAEAEA; /* Adjust to match your brand */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Horizontal Bars */
+.bar {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: black;
+    transition: transform 1s ease-in-out;
+}
+
+.top-bar {
+    top: 0;
+    transform: translateY(0);
+}
+
+.bottom-bar {
+    bottom: 0;
+    transform: translateY(0);
+}
+
+/* Logo Styling */
+#logo-container {
+    animation: fadeIn 1.5s ease-out;
+}
+
+#intro-logo {
+    width: 200px; /* Adjust as needed */
+    opacity: 0;
+    animation: logoAppear 1.5s forwards ease-in-out;
+}
+
+/* ✅ FADE IN EFFECT FOR CONTENT */
+.hidden {
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* ✅ KEYFRAMES FOR FADE-IN */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Logo Fade-In Animation */
+@keyframes logoAppear {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Main Content Initially Hidden */
+.hidden {
+    display: none;
+}
+
+
+/* Top Bar Styling */
+.top-bar {
+    font-size: 16px;
+    background: rgb(150, 150, 150); /* Updated background color */
+    padding: 12px 0;
+}
+
+/* Flexbox for Alignment */
+.top-bar .container-fluid {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contact Info (Phone - Left Aligned) */
+.top-bar .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between icon and text */
+    font-size: 14px;
+    /* flex: 1; Pushes to the left */
+    justify-content: flex-start;
+}
+
+/* Email (Centered) */
+.top-bar .email {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the email */
+    /* flex: 1; Takes equal space */
+    text-align: center;
+}
+
+/* Get Estimate Button (Right Aligned, Normal Size) */
+.top-bar .btn-estimate {
+    background-color: #b22222;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 16px; /* Normal button size */
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    justify-content: flex-end;
+    display: inline-block;
+}
+
+/* Hover Effect */
+.top-bar .btn-estimate:hover {
+    background-color: white;
+    color: #b22222;
+    border: 2px solid #b22222;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .top-bar .container-fluid {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+        gap: 5px;
+    }
+
+    .top-bar .contact-info, 
+    .top-bar .email, 
+    .top-bar .btn-estimate {
+        width: 100%; /* Full width on mobile */
+        justify-content: center; /* Center-align elements */
+    }
+
+    .top-bar .btn-estimate {
+        margin-top: 5px; /* Adds spacing between button and text */
+    }
+}
+
+
+
+
+/* General Button Styling */
+.btn {
+    background-color: #b22222;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #b22222;
+    border: 2px solid #b22222;
+}
+
+/* Navbar Styling */
+.navbar .btn-estimate {
+    background-color: #b22222; /* Deep Red */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+/* Navbar Hover Effect */
+.navbar .btn-estimate:hover {
+    background-color: white;
+    color: #b22222;
+    border: 2px solid #b22222;
+}
+
+/* Logo Styling */
+.logo {
+    height: 100px;
+    width: 200px;
+    border-right: solid black 1px;
+}
+
+/* Navbar Background */
+.custom-navbar {
+    background-color: #EAEAEA !important;
+}
+
+.custom-navbar-2 {
+    background-color: rgb(150, 150, 150) !important;
+    padding: 20px;
+}
+
+/* Centered Navbar */
+#navbarOne {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar Brand Alignment */
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+}
+
+/* Add Dark Overlay to Carousel Images */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the darkness (0.5 = 50% black) */
+    z-index: 1;
+}
+
+/* Ensure Captions Appear Above the Overlay */
+.carousel-caption {
+    position: absolute;
+    z-index: 2;
+}
+
+/* Carousel Image Sizing */
+.carousel-inner img {
+    height: 400px; /* Adjust this height as needed */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+}
+
+/* Card Centering */
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+/* Section Background */
+.row {
+    background-color: #919191;
+}
+
+/* Column Alignment */
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+/* Card Text Color */
+.card-text {
+    color: black;
+}
+
+/* Headings */
+h1 {
+    display: flex;
+    justify-content: center;
+    color: block;
+    padding: 20px;
+}
+
+/* Gallery Images */
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    background: url('storm-hero.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* THREE-STEP PROCESS */
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step {
+    background: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensures All Boxes Have the Same Height */
+@media (min-width: 768px) {
+    .steps-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .step {
+        height: 100%;
+    }
+}
+
+.step-icon {
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* TRUST US SECTION */
+.trust-us {
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+
+/* Image Styling for Trust Us Section */
+.framed-image {
+    width: 100%;
+    border: 5px solid black;
+}
+
+/* residential tab */
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    background: url('residential-hero.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* RESIDENTIAL ROOFING SERVICES */
+.residential-services {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+/* Service Box Styling */
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%; /* Ensures all boxes have equal height */
+}
+
+/* Ensures all boxes are the same height */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* Makes all boxes stretch to the same height */
+}
+
+
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Circular Images */
+.service-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #555;
+    flex-grow: 1; /* Allows content to fill the available space */
+    text-align: center;
+}
+
+/* CONTACT PAGE STYLING */
+.contact-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.owner-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular Image */
+    object-fit: cover;
+    border: 5px solid #b22222;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+.col-md-4 {
+    padding: 10px;
+
+}
+
+/* CONTACT INFO SECTION */
+
+.col-md-6 {
+    padding: 10;
+}
+
+.contact-info-section {
+    padding: 60px 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    padding: 20px;
+}
+
+
+.contact-icon {
+    font-size: 3rem;
+    color: #b22222;
+    margin-bottom: 10px;
+}
+
+.contact-info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .owner-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .contact-section, 
+    .contact-info-section {
+        text-align: center;
+    }
+}
+
+.card-body {
+    padding: 20px;
+}
+

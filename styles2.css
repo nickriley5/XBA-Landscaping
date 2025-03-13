@@ -1,0 +1,64 @@
+/* reviews */
+.reviews-container {
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    height: 200px; /* Adjust height as needed */
+    min-height: 220px; /* Ensures enough space for text */
+    padding: 50px 0; /* Ensures equal padding above and below */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+} 
+
+.review {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
+    opacity: 0;
+    left: 100%;
+}
+
+.active {
+    opacity: 1;
+    transform: translateX(0);
+    left: 0;
+}
+
+.exiting {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 22px;
+}
+
+@media (max-width: 768px) { 
+    .reviews-container {
+        max-width: 90%;
+        min-height: 270px; /* Ensures enough space for longer reviews */
+        padding: 50px 0;
+    }
+
+    .review {
+        font-size: 16px; /* Reduce text size for better readability */
+        padding: 15px; /* Adjust padding for smaller screens */
+        left: 0; /* Ensures the review stays in view */
+    }
+
+    .review strong {
+        display: block; /* Forces the name to appear on a new line */
+        margin-top: 10px; /* Adds space between the review text and the name */
+        font-size: 14px; /* Adjusts font size for better visibility */
+    }
+}
+

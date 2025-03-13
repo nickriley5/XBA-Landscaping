@@ -241,6 +241,11 @@
 .card {
     display: flex;
     justify-content: center;
+    color: rgb(150, 150, 150);
+}
+
+.card-header {
+color: rgb(150, 150, 150);
 }
 
 /* Section Background */
@@ -445,15 +450,40 @@ h1 {
 
 /* Circular Images */
 .service-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 100%; /* Make it responsive */
+    max-width: 250px; /* Limit the size for balance */
+    height: 180px; /* Adjust height for a more rectangular look */
+    border-radius: 20px; /* Gives smooth rounded corners without a circle */
     object-fit: cover;
     margin-bottom: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+/* Fun Hover Effect */
+.service-image:hover {
+    transform: scale(1.05); /* Slight zoom  */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Container for Better Layout */
+.service-box {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Fun Hover Effect for the Box */
+.service-box:hover {
+    background: #e0f7fa; /* Light teal color effect */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
 
 .service-box h3 {
     font-size: 1.4rem;
@@ -545,4 +575,5 @@ h1 {
 .card-body {
     padding: 20px;
 }
+
 

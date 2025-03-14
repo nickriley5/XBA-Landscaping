@@ -576,4 +576,84 @@ h1 {
     padding: 20px;
 }
 
+.feature-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content within the box */
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 40px; /* Increased padding for a premium look */
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Ensures the paragraph expands properly */
+.feature-box p {
+    flex-grow: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 90%; /* Prevents text from stretching too wide */
+}
+
+/* why choose xba */
+/* Why Choose XBA Section */
+.why-choose-us {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.service-box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+
+/* Call to Action Section */
+.cta-section {
+    background: #28a745;
+    color: white;
+    padding: 50px 0;
+}
+
+.cta-section .btn-primary {
+    background: white;
+    color: #28a745;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cta-section .btn-primary:hover {
+    background: #f1f1f1;
+    color: #28a745;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+}
+
+.footer .nav-link {
+    color: white;
+}
+
 

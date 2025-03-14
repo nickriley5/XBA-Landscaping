@@ -104,7 +104,7 @@
 
 /* Get Estimate Button (Right Aligned, Normal Size) */
 .top-bar .btn-estimate {
-    background-color: #b22222;
+    background-color: #28a745;
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -147,7 +147,7 @@
 
 /* General Button Styling */
 .btn {
-    background-color: #b22222;
+    background-color: #28a745;
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -208,6 +208,34 @@
     display: flex;
     justify-content: center;
 }
+
+/* Apply padding for mobile screens */
+@media (max-width: 992px) { /* Targets tablets & smaller screens */
+    .navbar-collapse {
+        padding-bottom: 15px; /* Adds space under search bar */
+    }
+
+    .navbar .form-control {
+        margin-bottom: 15px; /* Adds space below the search bar */
+    }
+
+    .navbar .btn-outline-success {
+        margin-bottom: 15px; /* Ensures button spacing */
+    }
+}
+
+/* Ensure spacing remains on larger screens */
+@media (min-width: 992px) { /* Targets desktop screens */
+    .navbar .form-control {
+        margin-bottom: 10px; /* Adds slight spacing for a balanced look */
+    }
+
+    .navbar .btn-outline-success {
+        margin-bottom: 10px;
+    }
+}
+
+
 
 /* Add Dark Overlay to Carousel Images */
 .carousel-item {

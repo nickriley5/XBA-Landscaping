@@ -451,10 +451,10 @@ h1 {
 /* Circular Images */
 .service-image {
     width: 100%; /* Make it responsive */
-    max-width: 250px; /* Limit the size for balance */
-    height: 180px; /* Adjust height for a more rectangular look */
+    max-width: 300px; /* Limit the size for balance */
+    height: 300px; /* Adjust height for a more rectangular look */
     border-radius: 20px; /* Gives smooth rounded corners without a circle */
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 15px;
     display: block;
     margin-left: auto;

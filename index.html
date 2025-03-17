@@ -4,9 +4,11 @@
     <meta name="description" content="Professional roofing services in Austin, TX. XBA Roofing offers reliable roof repairs, replacements, and inspections. Get a free estimate today!">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index | XBA 737-376-2585</title>
+    <title>Index | XBA </title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NSY0YQGLH"></script>
+    <script async src="https://cse.google.com/cse.js?cx=4687416b225384d35"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -16,6 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="blog2.css">
     <script src="script.js" defer></script>
     <script src="script2.js" defer></script>
 </head>
@@ -68,7 +71,7 @@
                 <li><a class="dropdown-item" href="maintenance.html">Maintenance</a></li>
                 <li><a class="dropdown-item" href="landscape-construction.html">Landscape Construction</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="patio.html">Patio and More</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -85,10 +88,12 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form class="d-flex" role="search" action="search-results.html">
+            <input id="search-input" class="form-control me-2" type="search" name="q" placeholder="Search..." aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+        </form>
+               
+        
         </div>
       </div>
     </nav>
@@ -208,7 +213,50 @@
         </div>
     </div>
 
-    
+    <!-- Latest Blog Posts Section -->
+<section class="latest-blog text-center py-5">
+  <div class="container">
+      <h2 class="mb-4">Latest from the XBA Landscaping Blog</h2>
+      <div class="row g-4">
+          <!-- Blog Post 1 -->
+          <div class="col-md-4">
+              <a href="blog-1.html" class="blog-card">
+                  <img src="backyard-patio.jpg" alt="Backyard Patio Ideas">
+                  <div class="blog-content">
+                      <h3>10 Stunning Backyard Patio Ideas</h3>
+                      <p>Discover breathtaking patio designs that blend beauty and functionality.</p>
+                  </div>
+              </a>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="col-md-4">
+              <a href="blog-2.html" class="blog-card">
+                  <img src="landscape-tips.jpg" alt="Low Maintenance Landscaping">
+                  <div class="blog-content">
+                      <h3>Low-Maintenance Landscaping Tips</h3>
+                      <p>Get expert advice on creating a gorgeous yard with minimal upkeep.</p>
+                  </div>
+              </a>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="col-md-4">
+              <a href="blog-3.html" class="blog-card">
+                  <img src="lighting.jpg" alt="Outdoor Lighting Guide">
+                  <div class="blog-content">
+                      <h3>The Ultimate Outdoor Lighting Guide</h3>
+                      <p>Enhance your landscape with strategic lighting techniques.</p>
+                  </div>
+              </a>
+          </div>
+      </div>
+      <div class="mt-4">
+          <a href="blog.html" class="btn btn-primary">View All Blog Posts</a>
+      </div>
+  </div>
+</section>
+
    
       <!-- Footer -->
   <footer class="footer text-center py-4">
@@ -223,5 +271,6 @@
 <!-- FontAwesome for Icons -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
+<!-- <script src="script3.js"></script> -->
 </body>
 </html>
